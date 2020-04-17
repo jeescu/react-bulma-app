@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+![Dashbaord](https://raw.githubusercontent.com/jeescu/react-pure-app/master/src/assets/img/sc-demo.png)
+
 ## Setup
 
 - Use yarn. Atleast `v1.19.1`
