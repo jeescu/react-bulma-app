@@ -18,16 +18,17 @@ function useProvideAuth() {
 
   const signin = (email: string, password: string) => {
     return new Promise((resolve) => {
-      const user = { name: 'user1' }
-      setUser(user);
-      resolve(user);
+      let data = { name: "user1" };
+      setUser(data);
+      resolve(data);
     });
   };
 
   const signup = (email: string, password: string) => {
-    new Promise((resolve) => {
-      setUser(user);
-      resolve({ name: 'user1' })
+    return new Promise((resolve) => {
+      let data = { name: "user1" };
+      setUser(data);
+      resolve({ name: "user1" });
     });
   };
 
@@ -38,12 +39,12 @@ function useProvideAuth() {
 
   const sendPasswordResetEmail = (email: string) => {
     // promise
-    return true
+    return true;
   };
 
   const confirmPasswordReset = (password: string, code: string) => {
     // promise
-    return true
+    return true;
   };
 
   // Subscribe to user on mount
@@ -55,7 +56,6 @@ function useProvideAuth() {
     //     setUser(false);
     //   }
     // });
-
     // Subscription unsubscribe function
     // return () => unsubscribe();
   }, []);
@@ -66,6 +66,6 @@ function useProvideAuth() {
     signup,
     signout,
     sendPasswordResetEmail,
-    confirmPasswordReset
+    confirmPasswordReset,
   };
 }

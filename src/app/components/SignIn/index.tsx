@@ -18,7 +18,7 @@ function SignIn(props: any) {
       .catch((error: any) => {
         setStatus({
           type: "error",
-          message: error.message
+          message: error.message,
         });
       });
   };

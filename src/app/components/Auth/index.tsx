@@ -17,7 +17,7 @@ function Auth(props: any) {
 
   // Function for fetching error for a field
   const getError = (field: any) => {
-    return errors.find(e => e.field === field);
+    return errors.find((e) => e.field === field);
   };
 
   // Function to see if field is empty
@@ -28,7 +28,7 @@ function Auth(props: any) {
     if (isEmpty(email)) {
       errors.push({
         field: "email",
-        message: "Please enter an email"
+        message: "Please enter an email",
       });
     }
   }
@@ -38,7 +38,7 @@ function Auth(props: any) {
     if (isEmpty(pass)) {
       errors.push({
         field: "pass",
-        message: "Please enter a password"
+        message: "Please enter a password",
       });
     }
   }
@@ -50,12 +50,12 @@ function Auth(props: any) {
     if (isEmpty(confirmPass)) {
       errors.push({
         field: "confirmPass",
-        message: "Please confirm password"
+        message: "Please confirm password",
       });
     } else if (pass !== confirmPass) {
       errors.push({
         field: "confirmPass",
-        message: `This doesn't match your password`
+        message: `This doesn't match your password`,
       });
     }
   }
@@ -70,7 +70,7 @@ function Auth(props: any) {
       if (props.onSubmit) {
         props.onSubmit({
           email,
-          pass
+          pass,
         });
       }
     }
@@ -83,7 +83,7 @@ function Auth(props: any) {
       )}
 
       <form
-        onSubmit={e => {
+        onSubmit={(e) => {
           e.preventDefault();
           handleSubmit();
         }}
@@ -96,7 +96,7 @@ function Auth(props: any) {
             icon="fa-envelope"
             size="medium"
             error={showErrors && getError("email")}
-            onChange={(value: string)  => setEmail(value)}
+            onChange={(value: string) => setEmail(value)}
           />
         )}
 
@@ -120,7 +120,7 @@ function Auth(props: any) {
             icon="fa-lock"
             size="medium"
             error={showErrors && getError("confirmPass")}
-            onChange={(value: string)  => setConfirmPass(value)}
+            onChange={(value: string) => setConfirmPass(value)}
           />
         )}
 

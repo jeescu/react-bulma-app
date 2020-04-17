@@ -2,7 +2,7 @@ import React from "react";
 import SignUpSection from "app/components/SignUpSection";
 import "./styles.scss";
 
-function SignupPage(props) {
+function SignupPage(props: any) {
   return (
     <SignUpSection
       color="white"

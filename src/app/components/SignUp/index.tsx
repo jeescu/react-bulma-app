@@ -5,7 +5,7 @@ import "./styles.scss";
 
 function SignUp(props: any) {
   const auth = useAuth();
-  const [status, setStatus]= useState({});
+  const [status, setStatus] = useState({});
 
   const onSubmit = ({ email, pass }: any) => {
     setStatus({ type: "pending" });
@@ -17,7 +17,7 @@ function SignUp(props: any) {
       .catch((error: any) => {
         setStatus({
           type: "error",
-          message: error.message
+          message: error.message,
         });
       });
   };

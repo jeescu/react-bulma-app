@@ -1,11 +1,11 @@
-import React from 'react';
-import { Switch, Route } from 'utils/router';
+import React from "react";
+import { Switch, Route } from "utils/router";
 import Navbar from "app/components/Navbar";
-import Footer from 'app/components/Footer';
-import DashboardPage from 'app/pages/Dashboard';
+import Footer from "app/components/Footer";
+import DashboardPage from "app/pages/Dashboard";
 
 function DashboardLayout({ match }: any) {
-  console.log(match.url)
+  console.log(match.url);
   return (
     <>
       <Navbar
@@ -13,7 +13,7 @@ function DashboardLayout({ match }: any) {
         spaced={true}
         logo="https://bulma.io/images/bulma-logo.png"
       />
-      
+
       <Switch>
         <Route exact path={match.url} component={DashboardPage} />
       </Switch>
@@ -25,7 +25,7 @@ function DashboardLayout({ match }: any) {
         copyright="© 2020 Bulma"
       />
     </>
-  )
+  );
 }
 
 export default DashboardLayout;

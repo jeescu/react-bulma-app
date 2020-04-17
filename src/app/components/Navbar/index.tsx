@@ -40,7 +40,7 @@ function Navbar(props: any) {
                   <Link
                     className="navbar-item"
                     to="/signout"
-                    onClick={e => {
+                    onClick={(e) => {
                       e.preventDefault();
                       auth.signout();
                     }}

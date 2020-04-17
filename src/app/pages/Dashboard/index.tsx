@@ -12,7 +12,7 @@ function DashboardPage(props: any) {
     if (auth.user === false) {
       router.push("/signin");
     }
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [auth]);
 
   return (

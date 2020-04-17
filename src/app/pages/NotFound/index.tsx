@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function NotFoundPage({ location }: any) {
   return (
@@ -6,11 +6,10 @@ function NotFoundPage({ location }: any) {
       style={{
         padding: "50px",
         width: "100%",
-        textAlign: "center"
+        textAlign: "center",
       }}
     >
-      The page <code>{location.pathname}</code> could not be
-      found.
+      The page <code>{location.pathname}</code> could not be found.
     </div>
   );
 }

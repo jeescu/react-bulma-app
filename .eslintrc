@@ -1,14 +1,15 @@
 {
-  "root": true,
-  "env": {
-    "node": true
-  },
-  "extends": ["eact-scripts", "airbnb"],
+  "extends": ["react-app"],
   "rules": {
-    "no-console": "off",
-    "bracketSpacing": true,
-    "jsxBracketSameLine": true,
-    "singleQuote": true,
-    "trailingComma": "all"
+    "no-console": 1,
+    "semi-style": 1,
+    "no-unused-vars": 1,
+    "implicit-arrow-linebreak": 1,
+    "no-shadow": 2,
+    "no-use-before-define": 2,
+    "no-new": 1,
+    "react/destructuring-assignment": 1,
+    "react/button-has-type": 1,
+    "no-lonely-if": 1
   }
 }

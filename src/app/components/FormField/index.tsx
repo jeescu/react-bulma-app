@@ -2,24 +2,16 @@ import React from "react";
 import "./styles.scss";
 
 function FormField(props: any) {
-  const {
-    type,
-    value,
-    placeholder,
-    icon,
-    size,
-    error,
-    ...otherProps
-  } = props;
+  const { type, value, placeholder, icon, size, error, ...otherProps } = props;
   return (
     <div className="field">
-      <div className={"control" + (icon ? " has-icons-left": "")}>
+      <div className={"control" + (icon ? " has-icons-left" : "")}>
         {type === "textarea" && (
           <textarea
             className={"textarea" + (size ? ` is-${size}` : "")}
             value={value}
             placeholder={placeholder}
-            onChange={e => otherProps.onChange(e.target.value)}
+            onChange={(e) => otherProps.onChange(e.target.value)}
           />
         )}
 
@@ -29,7 +21,7 @@ function FormField(props: any) {
             type={type}
             value={value}
             placeholder={placeholder}
-            onChange={e => otherProps.onChange(e.target.value)}
+            onChange={(e) => otherProps.onChange(e.target.value)}
           />
         )}
 

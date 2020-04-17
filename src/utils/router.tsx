@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useEffect } from 'react';
-import { Router as RouterOriginal, withRouter } from 'react-router-dom';
-import queryString from 'query-string';
-import { createBrowserHistory } from 'history';
+import React, { createContext, useContext, useEffect } from "react";
+import { Router as RouterOriginal, withRouter } from "react-router-dom";
+import queryString from "query-string";
+import { createBrowserHistory } from "history";
 export const history = createBrowserHistory();
 
 // @ts-ignore
@@ -39,9 +39,9 @@ export function useRouter() {
     pathname: routerProps.location.pathname,
     query: {
       ...queryString.parse(routerProps.location.search),
-      ...routerProps.match.params
+      ...routerProps.match.params,
     },
-    ...routerProps
+    ...routerProps,
   };
 }
 
