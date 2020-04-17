@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": ["eact-scripts", "airbnb"],
+  "rules": {
+    "no-console": "off",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
